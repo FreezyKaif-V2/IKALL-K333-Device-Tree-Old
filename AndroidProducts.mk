@@ -6,9 +6,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_IKALL.mk
+    $(LOCAL_DIR)/twrp_K333.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_IKALL-user \
-    omni_IKALL-userdebug \
-    omni_IKALL-eng
+   twrp_K333-eng
