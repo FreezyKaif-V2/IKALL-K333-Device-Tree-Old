@@ -6,21 +6,25 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from IKALL device
-$(call inherit-product, device/ikall/IKALL/device.mk)
+$(call inherit-product, device/ikall/K333/device.mk)
 
-PRODUCT_DEVICE := IKALL
-PRODUCT_NAME := omni_IKALL
+# Device Target Name
+PRODUCT_RELEASE_NAME := K333
+
+PRODUCT_DEVICE := K333
+PRODUCT_NAME := twrp_K333
 PRODUCT_BRAND := LOGIC
-PRODUCT_MODEL := IKALL
+PRODUCT_MODEL := K333
 PRODUCT_MANUFACTURER := ikall
 
-PRODUCT_GMS_CLIENTID_BASE := android-fise
+PRODUCT_GMS_CLIENTID_BASE := android-$(PRODUCT_BRAND)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="vnd_k39tv1_bsp_1g_k419-user 12 SP1A.210812.016 mp1rcV14151P8 release-keys"
