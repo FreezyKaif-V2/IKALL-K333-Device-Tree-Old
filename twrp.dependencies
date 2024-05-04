@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "FreezyKaif-V2",
+    "repository": "IKALL-K333-Device-Tree",
+    "target_path": "device/ikall/IKALL",
+    "branch": "android-12.1"
+  }
+]
