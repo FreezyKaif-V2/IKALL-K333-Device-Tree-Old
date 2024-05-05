@@ -81,11 +81,6 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 # Workaround for error copying vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := vendor
 
-# System as root
-BOARD_SUPPRESS_SECURE_ERASE := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-BOARD_HAS_NO_SELECT_BUTTON := true
-
 # Dynamic Partition
 BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_SIZE := 9122611200 # TODO: Fix hardcoded value
