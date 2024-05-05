@@ -106,7 +106,7 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
 # Verified Boot
-BOARD_AVB_ENABLE := true
+BOARD_AVB_ENABLE := false
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 # Hack: prevent anti rollback
@@ -115,13 +115,16 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 #PLATFORM_VERSION := 16.1.0
 
 # TWRP Configuration
-TW_THEME := portrait_hdpi
+TW_THEME := watch_mdpi
 #TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_NO_SCREEN_BLANK := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
+TW_HAS_NO_RECOVERY_PARTITION := true
+BOARD_HAS_NO_REAL_SDCARD := true
+
 
 #Excludes  
 TW_EXCLUDE_APEX := true
