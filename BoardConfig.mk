@@ -106,7 +106,7 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
 # Verified Boot
-BOARD_AVB_ENABLE := true
+BOARD_AVB_ENABLE := false
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 # Hack: prevent anti rollback
