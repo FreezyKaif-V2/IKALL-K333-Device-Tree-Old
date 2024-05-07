@@ -130,6 +130,9 @@ TW_EXCLUDE_TZDATA := true
 TW_EXCLUDE_LPTOOLS := true
 TW_EXCLUDE_SUPERSU := true
 
+# Fstab Path
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+
 #Additional Flags ( FreezyKaif )
 
 BOARD_HAS_NO_REAL_SDCARD := true
