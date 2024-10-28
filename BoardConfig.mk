@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/ikall/K333
+DEVICE_PATH := device/ikall/IKALL
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -56,6 +56,8 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x05000000
 BOARD_KERNEL_TAGS_OFFSET := 0x04000000
 BOARD_KERNEL_IMAGE_NAME := Image
+TARGET_KERNEL_CONFIG := K333_defconfig
+TARGET_KERNEL_SOURCE := kernel/ikall/K333
 
 # Kernel - prebuilt
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
