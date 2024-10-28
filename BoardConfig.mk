@@ -13,13 +13,14 @@ ALLOW_MISSING_DEPENDENCIES := true
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
-    vendor \
     system \
-    vbmeta_vendor \
-    product \
     boot \
-    vbmeta_system
+    vbmeta_system \
+    product \
+    vbmeta_vendor \
+    vendor
 BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_OTA_ASSERT_DEVICE := IKALL
 
 # Architecture
 TARGET_ARCH := arm
@@ -34,7 +35,6 @@ TARGET_BOARD_PLATFORM := mt6739
 TARGET_BOARD_SUFFIX := _64
 TARGET_IS_64_BIT := true
 TARGET_USES_64_BIT_BINDER := true
-TARGET_SUPPORTS_64_BIT_APPS := true
 
 # For MTK Devices
 BOARD_USES_MTK_HARDWARE := true
@@ -60,8 +60,8 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-TARGET_KERNEL_CONFIG := IKALL_defconfig
-TARGET_KERNEL_SOURCE := kernel/ikall/IKALL
+TARGET_KERNEL_CONFIG := K333_defconfig
+TARGET_KERNEL_SOURCE := kernel/ikall/K333
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
