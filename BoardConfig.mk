@@ -13,14 +13,14 @@ ALLOW_MISSING_DEPENDENCIES := true
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
+    vendor \
     system \
-    boot \
-    vbmeta_system \
-    product \
     vbmeta_vendor \
-    vendor
+    product \
+    boot \
+    vbmeta_system
+
 BOARD_USES_RECOVERY_AS_BOOT := true
-TARGET_OTA_ASSERT_DEVICE := IKALL
 
 # Architecture
 TARGET_ARCH := arm
@@ -35,6 +35,7 @@ TARGET_BOARD_PLATFORM := mt6739
 TARGET_BOARD_SUFFIX := _64
 TARGET_IS_64_BIT := true
 TARGET_USES_64_BIT_BINDER := true
+TARGET_SUPPORTS_64_BIT_APPS := true
 
 # For MTK Devices
 BOARD_USES_MTK_HARDWARE := true
@@ -89,6 +90,14 @@ TARGET_BOARD_PLATFORM := mt6739
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2021-08-01
+
+# Hack: prevent anti rollback
+PLATFORM_SECURITY_PATCH := 2099-12-31
+VENDOR_SECURITY_PATCH := 2099-12-31
+PLATFORM_VERSION := 16.1.0
 
 # Device Resolution
 TARGET_SCREEN_WIDTH := 240
